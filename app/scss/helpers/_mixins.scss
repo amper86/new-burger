@@ -1,0 +1,11 @@
+@mixin flexbox {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin title ($color-text: #ffffff) {
+  font-family: Gagalin, sans-serif;
+  font-size: 72px;
+  color: $color-text;
+}

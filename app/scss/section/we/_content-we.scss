@@ -1,0 +1,25 @@
+.content-we {
+  margin-top: 10%;
+  list-style: none;
+  @include flexbox;
+  &__item {
+    width: 30%;
+    padding: 0 20px;
+    @include flexbox;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    text-align: center;
+    font-family: lifehackmedium, sans-serif;
+    font-size: 24.1px;
+    color: $black;
+  }
+  &__text {
+    text-align: center;
+    font-family: "Ubuntu Light", sans-serif;
+    font-size: 14.03px;
+    color: $black;
+    line-height: 24.05px;
+  }
+}

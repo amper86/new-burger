@@ -1,0 +1,7 @@
+.header {
+  width: 960px;
+  padding-top: 10px;
+  @include flexbox;
+  flex-direction: row;
+  align-items: center;
+}
