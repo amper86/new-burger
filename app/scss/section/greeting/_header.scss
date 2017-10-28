@@ -4,4 +4,7 @@
   @include flexbox;
   flex-direction: row;
   align-items: center;
+  &__logo {
+    margin-right: auto;
+  }
 }

@@ -1,10 +1,8 @@
 .scroll {
-  position: fixed;
+  @include flexbox;
+  justify-content: center;
+  position: absolute;
   left: 50%;
-  bottom: 40px;
-  transform: translate(-50%, 0);
-  width: 29px;
-  height:14px;
-  background: url("../images/icons/arrow-scroll.svg") center no-repeat;
-  cursor: pointer;
+  bottom: 50px;
+  transform: translateX(-50%);
 }

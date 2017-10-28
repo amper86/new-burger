@@ -11,10 +11,14 @@
 @import "section/greeting/nav";
 @import "section/greeting/order-button";
 @import "section/greeting/greeting-content";
+@import "components/scroll";
 
 @import "section/we/we";
 @import "section/we/title-we";
-@import "section/we/content-we";
+@import "section/we/we-list";
 
-@import "components/scroll";
+@import "section/reviews/reviews";
+@import "section/reviews/reviews-list";
+@import "section/reviews/reviews-button";
+
 @import "components/pagination";

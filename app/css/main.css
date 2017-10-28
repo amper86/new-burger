@@ -427,7 +427,8 @@ template {
   display: none; }
 
 .container {
-  max-width: 1100px;
+  height: 100%;
+  max-width: 960px;
   margin: 0 auto; }
   .container_greeting {
     display: -webkit-flex;
@@ -442,13 +443,14 @@ template {
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
 
 .greeting {
-  width: 100%;
   height: 100vh;
   min-height: 650px;
-  background: url("../images/bg/texture.png") repeat, url("../images/bg/video-bg.jpg") no-repeat center/cover; }
+  background: url("../images/bg/texture.png") repeat, url("../images/bg/video-bg.jpg") no-repeat center/cover;
+  position: relative; }
 
 .header {
   width: 960px;
@@ -459,12 +461,12 @@ template {
   display: flex;
   flex-direction: row;
   align-items: center; }
+  .header__logo {
+    margin-right: auto; }
 
 .logo {
-  flex-grow: 1; }
-  .logo__container {
-    width: 92px;
-    height: 69px; }
+  width: 92px;
+  height: 69px; }
   .logo__img {
     width: 100%;
     height: 100%; }
@@ -490,6 +492,8 @@ template {
     font-family: ubuntumedium, sans-serif;
     color: #ffffff;
     font-size: 13px; }
+    .nav__link:hover {
+      text-decoration: underline; }
 
 .order-button {
   width: 97px;
@@ -507,18 +511,23 @@ template {
     background: #c1401e; }
 
 .greeting-content {
-  width: 100%;
-  height: 450px;
+  height: 100%;
   display: -webkit-flex;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .greeting-content__column {
+    flex: 1 0 50%; }
   .greeting-content__burger {
-    width: 50%;
-    height: 100%;
-    background: url("../images/content/drops.png") no-repeat 50% 40%, url("../images/content/burger.png") no-repeat 60% 50%; }
+    background: url("../images/content/burger.png") no-repeat center/contain;
+    padding: 0 0 80px 30px; }
+  .greeting-content__img {
+    width: 450px;
+    height: 335px;
+    margin: 0 50px 0 0; }
   .greeting-content__info {
-    width: 50%;
     height: 100%;
     display: -webkit-flex;
     display: -webkit-box;
@@ -530,32 +539,49 @@ template {
     font-family: Gagalin, sans-serif;
     font-size: 72px;
     color: #f9b43b;
-    margin: 0; }
+    margin: 70px 0 20px 0; }
   .greeting-content__text {
     color: #ffffff;
     font-family: lifehackmedium, sans-serif;
     font-size: 65px;
     margin: 0; }
 
+.scroll {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%); }
+
 .we {
   width: 100%;
   height: 100vh;
   min-height: 650px;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
   background: url("../images/bg/bg-we.jpg") no-repeat center/cover; }
 
 .title-we {
   font-family: Gagalin, sans-serif;
   font-size: 72px;
-  color: #2f3234; }
+  color: #2f3234;
+  margin: 0; }
 
-.content-we {
+.we-list {
   margin-top: 10%;
   list-style: none;
   display: -webkit-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .content-we__item {
+  .we-list__item {
     width: 30%;
     padding: 0 20px;
     display: -webkit-flex;
@@ -564,54 +590,102 @@ template {
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .content-we__title {
+  .we-list__title {
     text-align: center;
     font-family: lifehackmedium, sans-serif;
     font-size: 24.1px;
     color: #2f3234; }
-  .content-we__text {
+  .we-list__text {
     text-align: center;
     font-family: "Ubuntu Light", sans-serif;
     font-size: 14.03px;
     color: #2f3234;
     line-height: 24.05px; }
 
-.scroll {
-  position: fixed;
-  left: 50%;
-  bottom: 40px;
-  transform: translate(-50%, 0);
-  width: 29px;
-  height: 14px;
-  background: url("../images/icons/arrow-scroll.svg") center no-repeat;
-  cursor: pointer; }
+.reviews {
+  height: 100vh;
+  min-height: 650px; }
+  .reviews__item {
+    background: no-repeat center/cover;
+    flex: 1 0 25%;
+    position: relative; }
+    .reviews__item:hover .reviews__description {
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0; }
+  .reviews__description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 7.2%;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(20, 20, 20, 0.7);
+    box-sizing: border-box;
+    transition: height .3s ease-in; }
+  .reviews__name {
+    font-family: Gagalin, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-top: 15%; }
+  .reviews__text {
+    font-family: "Ubuntu Light",sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 24px; }
+
+.reviews-list {
+  list-style: none;
+  height: 100%;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0; }
+
+.reviews-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "ubuntumedium",sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: #2f3234;
+  padding: 13px 28px; }
+  .reviews-button:hover {
+    background-color: #1f2122; }
 
 .pagination {
   position: fixed;
   right: 6.3%;
   top: 90px;
   z-index: 10; }
-  .pagination__list {
+  .pagination-list {
     list-style: none; }
-  .pagination__item {
-    margin-bottom: 5px; }
-  .pagination__link {
-    box-sizing: border-box;
-    display: block;
-    position: relative;
-    width: 16px;
-    height: 16px;
-    border: 1px solid transparent;
-    border-radius: 50%; }
-    .pagination__link:hover, .pagination__link_active {
-      border-color: #ffffff; }
-    .pagination__link:before {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      content: "";
-      width: 6px;
-      height: 6px;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background-color: #ffffff; }
+    .pagination-list__item {
+      margin-bottom: 5px; }
+    .pagination-list__link {
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      width: 16px;
+      height: 16px;
+      border: 1px solid transparent;
+      border-radius: 50%; }
+      .pagination-list__link:hover, .pagination-list__link_active {
+        border-color: #ffffff; }
+      .pagination-list__link:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: "";
+        width: 6px;
+        height: 6px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: #ffffff; }
