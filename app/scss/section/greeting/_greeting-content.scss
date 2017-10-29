@@ -1,0 +1,33 @@
+.greeting-content {
+  height: 100%;
+  @include flexbox;
+  align-items: center;
+  &__column {
+    flex: 1 0 50%;
+  }
+  &__burger {
+    background: url("../images/content/burger.png") no-repeat center/contain;
+    padding: 0 0 80px 30px;
+  }
+  &__img {
+    width: 450px;
+    height: 335px;
+    margin: 0 50px 0 0;
+  }
+  &__info {
+    height: 100%;
+    @include flexbox;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    @include title($yellow);
+    margin: 70px 0 20px 0;
+  }
+  &__text {
+    color: #ffffff;
+    font-family:lifehackmedium, sans-serif;
+    font-size: 65px;
+    margin: 0;
+  }
+}

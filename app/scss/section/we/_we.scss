@@ -1,0 +1,8 @@
+.we {
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  @include flexbox;
+  align-items: center;
+  background: url("../images/bg/bg-we.jpg") no-repeat center/cover;
+}
