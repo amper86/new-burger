@@ -1,7 +1,6 @@
 .greeting-content {
   height: 100%;
   @include flexbox;
-  justify-content: center;
   align-items: center;
   &__column {
     flex: 1 0 50%;
