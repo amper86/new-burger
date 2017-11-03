@@ -14,4 +14,9 @@
   &:hover {
     background: #c1401e;
   }
+  &_form {
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
 }

@@ -1,0 +1,80 @@
+.accordeon-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &__item {
+    margin-bottom: 25px;
+  }
+  &__name {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-family: Gagalin, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:before {
+      display: inline-block;
+      margin-right: 10px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid $yellow;
+      transform: translateY(-50%);
+    }
+  }
+  &__content {
+    font-size: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  &__picture {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+    vertical-align: top;
+  }
+  &__image {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__description {
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    padding: 0 30px 0 20px;
+    box-sizing: border-box;
+  }
+  &__proffesion {
+    margin-top: 0;
+    font-family: ubuntubold, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+  }
+  &__text {
+    font-family: "Ubuntu Light", sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+  }
+}
+
+.accordeon-list__item_active {
+  .accordeon-list__name {
+    color: $yellow;
+    &:before {
+      transform: rotate(180deg) translateY(50%);
+    }
+  }
+  .accordeon-list__content {
+    height: 100%;
+  }
+}
