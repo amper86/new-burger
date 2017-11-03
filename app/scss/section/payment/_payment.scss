@@ -1,0 +1,9 @@
+.payment {
+  height: 100vh;
+  min-height: 650px;
+  background: url("../images/bg/form-bg.jpg") no-repeat center/cover;
+  &__title {
+    @include title($yellow);
+    text-align: center;
+  }
+}

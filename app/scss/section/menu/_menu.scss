@@ -1,0 +1,13 @@
+.menu {
+  height: 100vh;
+  min-height: 650px;
+  position: relative;
+  background: url("../images/bg/menu-bg.jpg") no-repeat center/cover;
+  &__title {
+    position: absolute;
+    top: 100px;
+    left: 95px;
+    margin: 0;
+    @include title();
+  }
+}

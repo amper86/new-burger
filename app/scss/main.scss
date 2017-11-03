@@ -1,5 +1,6 @@
 @import "fonts/fonts";
 @import "helpers/normalize";
+@import "helpers/base";
 @import "helpers/mixins";
 @import "helpers/variables";
 
@@ -9,7 +10,6 @@
 @import "section/greeting/header";
 @import "section/greeting/logo";
 @import "section/greeting/nav";
-@import "section/greeting/order-button";
 @import "section/greeting/greeting-content";
 @import "components/scroll";
 
@@ -17,8 +17,23 @@
 @import "section/we/title-we";
 @import "section/we/we-list";
 
+@import "section/command/command";
+@import "section/command/accordeon-list";
+
+@import "section/menu/menu";
+@import "section/menu/menu-accord";
+
 @import "section/reviews/reviews";
 @import "section/reviews/reviews-list";
 @import "section/reviews/reviews-button";
 
+@import "section/payment/payment";
+@import "section/payment/form";
+
+@import "section/contacts/section-contacts";
+@import "section/contacts/footer";
+
+@import "components/order-button";
 @import "components/pagination";
+@import "components/contacts";
+@import "components/social-list";

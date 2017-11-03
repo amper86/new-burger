@@ -1,0 +1,8 @@
+.footer {
+  padding: 18px 0;
+  background: url("../images/bg/footer-bg.jpg") no-repeat center/cover;
+  &__column {
+    flex: 1 0 50%;
+    @include flexbox;
+  }
+}

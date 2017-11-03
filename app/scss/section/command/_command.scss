@@ -1,0 +1,22 @@
+.command {
+  height: 100vh;
+  min-height: 650px;
+  background: url("../images/bg/command-bg.jpg") no-repeat center top/cover;
+  position: relative;
+  &__column {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background-color: rgba($black, .9);
+  }
+  &__content {
+    max-width: 380px;
+    padding: 90px 0 0 80px;
+  }
+  &__title {
+    margin: 0 0 90px 0;
+    @include title($yellow);
+  }
+}

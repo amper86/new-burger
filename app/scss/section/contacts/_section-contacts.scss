@@ -1,0 +1,11 @@
+.section-contacts {
+  height: 100vh;
+  min-height: 650px;
+  position: relative;
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
