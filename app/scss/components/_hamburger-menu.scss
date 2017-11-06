@@ -1,0 +1,12 @@
+.hamburger-menu {
+  margin-left: rem(30px);
+  display: none;
+  &__line {
+    display: block;
+    background-color: #ffffff;
+    width: rem(24px);
+    height: rem(4px);
+    border-radius: rem(2px);
+    margin-bottom: rem(5px);
+  }
+}

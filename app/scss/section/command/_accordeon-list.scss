@@ -1,27 +1,24 @@
 .accordeon-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   &__item {
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
   }
   &__name {
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
     color: #ffffff;
-    font-family: Gagalin, sans-serif;
-    font-size: 14px;
+    @include gagalin();
+    font-size: rem(14px);
     text-transform: uppercase;
     text-decoration: none;
     &:before {
       display: inline-block;
-      margin-right: 10px;
+      margin-right: rem(10px);
       content: '';
       width: 0;
       height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-top: 5px solid $yellow;
+      border-left: rem(5px) solid transparent;
+      border-right: rem(5px) solid transparent;
+      border-top: rem(5px) solid $yellow;
       transform: translateY(-50%);
     }
   }
@@ -29,11 +26,11 @@
     font-size: 0;
     height: 0;
     overflow: hidden;
+    display: flex;
   }
   &__picture {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
+    flex: 0 0 rem(100px);
+    height: rem(100px);
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -48,21 +45,19 @@
     transform: translate(-50%, -50%);
   }
   &__description {
-    display: inline-block;
-    vertical-align: top;
-    width: 280px;
-    padding: 0 30px 0 20px;
-    box-sizing: border-box;
+    flex: 0 0 rem(260px);
+    padding: 0 rem(30px) 0 rem(20px);
   }
   &__proffesion {
-    margin-top: 0;
-    font-family: ubuntubold, sans-serif;
-    font-size: 14px;
+    margin: 0 0 rem(12px) 0;
+    @include ubuntu(bold);
+    font-size: rem(14px);
     color: #ffffff;
   }
   &__text {
-    font-family: "Ubuntu Light", sans-serif;
-    font-size: 14px;
+    @include ubuntu(light);
+    font-size: rem(14px);
+    line-height: rem(24px);
     color: #ffffff;
   }
 }

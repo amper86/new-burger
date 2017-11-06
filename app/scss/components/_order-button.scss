@@ -1,18 +1,18 @@
 .order-button {
-  padding: 0 15px;
-  background-color: #e45028;
-  border-radius: 5px;
-  font-family: ubuntumedium, sans-serif;
-  font-size: 13px;
+  padding: 0 rem(15px);
+  background-color: $red;
+  border-radius: rem(5px);
+  @include  ubuntu(medium);
+  font-size: rem(13px);
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
-  line-height: 35px;
+  line-height: rem(35px);
   transition: .3s linear;
 
   &:hover {
-    background: #c1401e;
+    background: $dark-red;
   }
   &_form {
     outline: none;

@@ -3,12 +3,12 @@
   display: inline-block;
   text-decoration: none;
   color: #ffffff;
-  font-family: "ubuntumedium",sans-serif;
-  font-size: 13px;
+  @include ubuntu(medium);
+  font-size: rem(13px);
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: rem(5px);
   background-color: $black;
-  padding: 13px 28px;
+  padding: rem(13px) rem(28px);
   &:hover {
     background-color: #1f2122;
   }
