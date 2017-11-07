@@ -1,0 +1,28 @@
+.command {
+  background: url("../images/bg/command-bg.jpg") no-repeat center top/cover;
+  position: relative;
+  &__column {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background-color: rgba($black, .9);
+    @include tablets {
+      width: 100%;
+    }
+  }
+  &__content {
+    padding: rem(90px) 0 0 rem(80px);
+    @include phones {
+      padding-left: 0;
+    }
+  }
+  &__title {
+    margin: 0 0 rem(90px) 0;
+    @include title($yellow);
+    @include tablets {
+      text-align: center;
+    }
+  }
+}

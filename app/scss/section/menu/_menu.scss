@@ -1,0 +1,10 @@
+.menu {
+  position: relative;
+  background: url("../images/bg/menu-bg.jpg") no-repeat center/cover;
+  &__title {
+    position: absolute;
+    top: rem(100px);
+    left: rem(95px);
+    @include title();
+  }
+}

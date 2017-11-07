@@ -1,0 +1,66 @@
+.menu-accord {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  &__item {
+    height: 100%;
+    @include flexbox;
+  }
+  &__link {
+    width: rem(80px);
+    height: 100%;
+    display: block;
+    position: relative;
+    background: no-repeat center/cover;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(20,20,20, .7);
+    }
+  }
+  &__title {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    font-size: rem(40px);
+    white-space: nowrap;
+    @include gagalin();
+    color: #ffffff;
+    text-transform: uppercase;
+    transform: translateX(-35%) rotate(-90deg);
+    @include tablets {
+      top: 95%;
+      transform: translateX(3%) rotate(-90deg);
+      transform-origin: left top;
+    }
+  }
+  &__description {
+    width: 0;
+    overflow: hidden;
+    background-color: rgba($black, .8);
+    color: #ffffff;
+    p {
+      @include ubuntu(light);
+      font-size: rem(14px);
+      line-height: rem(24px);
+    }
+  }
+  &__item_active {
+    & .menu-accord__title {
+      color: $yellow;
+    }
+    & .menu-accord__description {
+      width: rem(540px);
+      padding: rem(80px) rem(35px);
+      @include tablets {
+        width: 100%;
+      }
+    }
+  }
+}

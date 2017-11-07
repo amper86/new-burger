@@ -1,8 +1,5 @@
 .reviews-list {
-  list-style: none;
   height: 100%;
   @include flexbox;
   flex-wrap: wrap;
-  margin:0;
-  padding: 0;
 }
