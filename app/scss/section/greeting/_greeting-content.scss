@@ -2,6 +2,9 @@
   height: 100%;
   @include flexbox;
   align-items: center;
+  @include tablets {
+    flex-direction: column;
+  }
   &__column {
     flex: 1 0 50%;
   }
@@ -12,6 +15,10 @@
     width: rem(451px);
     height: rem(424px);
     padding: 0 0 rem(138px) rem(20px);
+    @include  tablets {
+      background-size: contain;
+      margin-top: rem(50px);
+    }
   }
   &__img {
     align-self: center;
@@ -22,6 +29,10 @@
     @include flexbox;
     flex-direction: column;
     justify-content: center;
+    @include tablets {
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
   &__title {
     @include title($yellow);
@@ -32,5 +43,9 @@
     @include lifehack();
     font-size: rem(65px);
     margin: 0;
+    @include tablets {
+      text-align: center;
+      padding: 0 rem(70px);
+    }
   }
 }

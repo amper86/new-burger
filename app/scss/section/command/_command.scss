@@ -8,12 +8,21 @@
     right: 0;
     width: 50%;
     background-color: rgba($black, .9);
+    @include tablets {
+      width: 100%;
+    }
   }
   &__content {
     padding: rem(90px) 0 0 rem(80px);
+    @include phones {
+      padding-left: 0;
+    }
   }
   &__title {
     margin: 0 0 rem(90px) 0;
     @include title($yellow);
+    @include tablets {
+      text-align: center;
+    }
   }
 }

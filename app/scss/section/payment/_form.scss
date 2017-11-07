@@ -1,10 +1,20 @@
 .form {
   &__container {
     @include flexbox;
+    @include tablets {
+      flex-direction: column;
+      padding: 0 16.27%;
+    }
+    @include phones {
+      padding: 0;
+    }
   }
   &__column {
     flex: 1 0 50%;
     margin-right: rem(20px);
+    @include tablets {
+      margin-right: 0;
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -12,6 +22,19 @@
   &__row {
     display: flex;
     margin-bottom: rem(20px);
+    &_phone {
+      @include phones {
+        justify-content: center;
+        align-items: flex-start;
+        .form__block {
+          flex: 0 rem(150px);
+          @include flexbox;
+        }
+        .form__block_btn {
+          flex: 0;
+        }
+      }
+    }
   }
   &__block {
     flex: 1;
@@ -31,7 +54,10 @@
     padding: 0 rem(5px);
     border-radius: rem(5px);
     outline: none;
-    border: none;
+    border: rem(2px) solid transparent;
+    &:focus {
+      border: rem(2px) solid $yellow;
+    }
   }
   &__textarea {
     width: 100%;
@@ -40,7 +66,10 @@
     resize: none;
     border-radius: rem(5px);
     outline: none;
-    border: none;
+    border: rem(2px) solid transparent;
+    &:focus {
+      border: rem(2px) solid $yellow;
+    }
   }
   &__input_radio {
     position: absolute;

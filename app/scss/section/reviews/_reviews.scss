@@ -4,6 +4,9 @@
     flex: 1 0 25%;
     position: relative;
     filter: grayscale(1);
+    @include tablets {
+      flex: 1 0 50%;
+    }
     &:hover .reviews__description {
       height: 100%;
       top: 0;
@@ -21,6 +24,9 @@
     background-color: rgba(20,20,20, .7);
     box-sizing: border-box;
     transition: height .3s ease-in;
+    @include tablets {
+      text-align: center;
+    }
 
     & p {
       @include ubuntu(light);
@@ -28,6 +34,9 @@
       color: #ffffff;
       line-height: rem(24px);
       margin-bottom: rem(20px);
+      @include phones {
+        line-height: rem(20px);
+      }
     }
   }
   &__name {
@@ -35,6 +44,12 @@
     font-size: rem(14px);
     color: #ffffff;
     text-transform: uppercase;
-    padding-top: 15%;
+    padding-top: rem(50px);
+    @include tablets {
+      padding-top: rem(30px);
+    }
+    @include phones {
+      padding-top: rem(10px);
+    }
   }
 }

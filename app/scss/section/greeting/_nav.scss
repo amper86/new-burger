@@ -4,6 +4,9 @@
   align-items: center;
   &-list {
     @include flexbox;
+    @include tablets {
+      display: none;
+    }
   }
   &__item {
     &:not(:last-child):after {

@@ -3,6 +3,12 @@ html,
 body {
   height: 100%;
   font-size: 16px;
+  @include tablets {
+    font-size: 15px;
+  }
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -14,7 +20,13 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 960px;
+ /* min-width: 960px;
+  @include tablets {
+    min-width: 768px;
+  }
+  @include phones {
+    min-width: 480px;
+  }*/
   min-height: 100%;
   overflow: hidden;
 }

@@ -3,6 +3,10 @@
   @include flexbox;
   justify-content: flex-end;
   align-items: center;
+  @include phones {
+    margin-top: rem(15px);
+    justify-content: center;
+  }
 
   &__item {
     margin-right: rem(20px);

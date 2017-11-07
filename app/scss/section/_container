@@ -24,5 +24,8 @@
   &_footer {
     @include flexbox;
     padding: 0 rem(20px);
+    @include  phones {
+      flex-direction: column;
+    }
   }
 }

@@ -3,6 +3,9 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
+  @include phones {
+    text-align: center;
+  }
   &__address {
     color: #ffffff;
     @include ubuntu(light);

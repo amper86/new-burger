@@ -1,29 +1,51 @@
 .we-list {
   @include flexbox;
+  @include phones {
+    flex-direction: column;
+  }
   &__item {
     flex: 1;
     padding: 0 rem(20px);
     @include flexbox;
     flex-direction: column;
     align-items: center;
+    @include phones {
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: rem(20px);
+    }
   }
   &__image {
     width: rem(90px);
     height: rem(90px);
     margin-bottom: rem(30px);
+    @include phones {
+      flex: 3;
+      padding-right: rem(20px);
+    }
   }
   &__picture {
     width: 100%;
     height: 100%;
   }
-  &__title {
+  &__description {
     text-align: center;
+    @include phones {
+      @include flexbox;
+      flex-direction: column;
+      flex: 7;
+      text-align: left;
+    }
+  }
+  &__title {
     @include lifehack();
     font-size: rem(24px);
     color: $black;
+    @include phones {
+      margin-bottom: 0;
+    }
   }
   &__text {
-    text-align: center;
     @include ubuntu(light);
     font-size: rem(14px);
     color: $black;
