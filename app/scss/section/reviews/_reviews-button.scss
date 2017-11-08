@@ -9,7 +9,7 @@
   border-radius: rem(5px);
   background-color: $black;
   padding: rem(13px) rem(28px);
-  @include phones {
+  @include tablets {
     font-size:rem(10px);
     padding: rem(10px) rem(22px);
   }

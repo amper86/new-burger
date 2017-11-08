@@ -4,9 +4,15 @@
   align-items: center;
   @include tablets {
     flex-direction: column;
+    justify-content: center;
   }
   &__column {
     flex: 1 0 50%;
+    @include tablets {
+      height: auto;
+      align-items: center;
+      flex: 0;
+    }
   }
   &__burger {
     background: url("../images/icons/drops.svg") no-repeat;
@@ -17,7 +23,9 @@
     padding: 0 0 rem(138px) rem(20px);
     @include  tablets {
       background-size: contain;
-      margin-top: rem(50px);
+      width: rem(300px);
+      height: rem(282px);
+      padding: 0 0 rem(92px) rem(13px);
     }
   }
   &__img {
@@ -28,15 +36,16 @@
     height: 100%;
     @include flexbox;
     flex-direction: column;
-    justify-content: center;
     @include tablets {
-      justify-content: flex-start;
-      align-items: center;
+      height: auto;
     }
   }
   &__title {
     @include title($yellow);
     margin: 0 0 rem(20px) 0;
+    @include  tablets {
+      text-align: center;
+    }
   }
   &__text {
     color: #ffffff;
@@ -45,7 +54,8 @@
     margin: 0;
     @include tablets {
       text-align: center;
-      padding: 0 rem(70px);
+      padding: 0 rem(120px);
+      font-size: rem(43px);
     }
   }
 }

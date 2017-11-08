@@ -37,12 +37,6 @@
   @return $px / 16px + 0rem
 }
 
-@mixin title ($color-text: #ffffff) {
-  @include gagalin();
-  font-size: rem(72px);
-  color: $color-text;
-}
-
 @mixin tablets {
   @media screen and (max-width: $tablets) {
     @content;
@@ -53,5 +47,14 @@
   @media screen and (max-width: $phones) {
     @content;
   }
+}
+
+@mixin title ($color-text: #ffffff) {
+  @include gagalin();
+  font-size: rem(72px);
+  @include tablets {
+    font-size: rem(48px);
+  }
+  color: $color-text;
 }
 
