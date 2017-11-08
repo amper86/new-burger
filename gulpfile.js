@@ -1,6 +1,7 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var del         = require('del');
 
 // Static Server + watching scss/html files
@@ -18,6 +19,7 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function() {
     return gulp.src("app/scss/**/*.scss")
         .pipe(sass())
+        .pipe(autoprefixer(['last 10 versions', '> 1%'], { cascade: true }))
         .pipe(gulp.dest("app/css"))
         .pipe(browserSync.stream());
 });

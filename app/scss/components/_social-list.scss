@@ -1,6 +1,6 @@
 .social-list {
   flex: 1;
-  @include flexbox;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
   @include phones {

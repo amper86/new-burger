@@ -1,5 +1,5 @@
 .reviews-list {
   height: 100%;
-  @include flexbox;
+  display: flex;
   flex-wrap: wrap;
 }

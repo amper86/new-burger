@@ -6,7 +6,7 @@
   bottom: 0;
   &__item {
     height: 100%;
-    @include flexbox;
+    display: flex;
   }
   &__link {
     width: rem(80px);

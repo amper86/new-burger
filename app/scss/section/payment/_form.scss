@@ -1,6 +1,6 @@
 .form {
   &__container {
-    @include flexbox;
+    display: flex;
     @include tablets {
       flex-direction: column;
       padding: 0 16.27%;
@@ -28,7 +28,7 @@
         align-items: flex-start;
         .form__block {
           flex: 0 rem(150px);
-          @include flexbox;
+          display: flex;
         }
         .form__block_btn {
           flex: 0;

@@ -1,9 +1,9 @@
 .nav {
   padding: 0 rem(15px);
-  @include flexbox;
+  display: flex;
   align-items: center;
   &-list {
-    @include flexbox;
+    display: flex;
     @include tablets {
       display: none;
     }

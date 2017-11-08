@@ -1,5 +1,5 @@
 {
-  "name": "burger-loftschool",
+  "name": "autoprefiver",
   "version": "0.0.1",
   "description": "responsive web site",
   "main": "index.js",
@@ -12,6 +12,7 @@
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-sass": "^3.1.0"
   }
 }

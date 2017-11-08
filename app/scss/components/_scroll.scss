@@ -1,7 +1,7 @@
 .scroll {
   width: rem(30px);
   height: rem(15px);
-  @include flexbox;
+  display: flex;
   justify-content: center;
   position: absolute;
   left: 50%;

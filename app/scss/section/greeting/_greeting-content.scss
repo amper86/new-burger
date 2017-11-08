@@ -1,6 +1,6 @@
 .greeting-content {
   height: 100%;
-  @include flexbox;
+  display: flex;
   align-items: center;
   @include tablets {
     flex-direction: column;
@@ -34,7 +34,7 @@
   }
   &__info {
     height: 100%;
-    @include flexbox;
+    display: flex;
     flex-direction: column;
     @include tablets {
       height: auto;
