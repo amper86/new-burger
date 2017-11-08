@@ -1,0 +1,36 @@
+.contacts {
+  @include flexbox;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  @include phones {
+    text-align: center;
+  }
+  &__address {
+    color: #ffffff;
+    @include ubuntu(light);
+    font-size: rem(14px);
+    line-height: rem(24px);
+  }
+  &__phone {
+    color: $orange;
+    @include ubuntu(bold);
+    font-size: rem(14px);
+    text-decoration: none;
+    line-height: rem(24px);
+    transition: .1s linear;
+    &:hover {
+      color: #ffffff;
+      & .contacts__icon {
+        fill: #ffffff;
+      }
+    }
+  }
+  &__icon {
+    display: inline-block;
+    margin-right: rem(8px);
+    width: rem(12px);
+    height: rem(12px);
+    fill: $orange;
+  }
+}

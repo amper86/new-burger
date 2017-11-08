@@ -4,8 +4,57 @@
   display: -ms-flexbox;
   display: flex;
 }
+
+@mixin  gagalin() {
+  font-family: 'Gagalin-Regular', Helvetiva, sans-serif;
+}
+
+@mixin lifehack() {
+  font-family: 'Lifehack-Medium', Helvetiva, sans-serif;
+}
+
+@mixin ubuntu ($style: normal) {
+  font-family: 'Ubuntu', Helvetiva, sans-serif;
+
+  @if $style == regular {
+    font-weight: normal;
+  }
+
+  @if $style == light {
+    font-weight: 300;
+  }
+
+  @if $style == medium {
+    font-weight: 500;
+  }
+
+  @if $style == bold {
+    font-weight: bold;
+  }
+}
+
+@function rem($px){
+  @return $px / 16px + 0rem
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
 @mixin title ($color-text: #ffffff) {
-  font-family: Gagalin, sans-serif;
-  font-size: 72px;
+  @include gagalin();
+  font-size: rem(72px);
+  @include tablets {
+    font-size: rem(48px);
+  }
   color: $color-text;
 }
+

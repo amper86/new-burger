@@ -1,11 +1,8 @@
 .header {
-  width: 1100px;
-  padding-top: 10px;
+  width: 100%;
+  padding-top: rem(10px);
   @include flexbox;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  &__logo {
-    /*margin-right: auto;*/
-  }
 }

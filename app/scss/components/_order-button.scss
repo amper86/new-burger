@@ -1,0 +1,22 @@
+.order-button {
+  padding: 0 rem(15px);
+  background-color: $red;
+  border-radius: rem(5px);
+  @include  ubuntu(medium);
+  font-size: rem(13px);
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: rem(35px);
+  transition: .3s linear;
+
+  &:hover {
+    background: $dark-red;
+  }
+  &_form {
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+}
