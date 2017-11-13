@@ -10,7 +10,6 @@
   text-align: center;
   line-height: rem(35px);
   transition: .3s linear;
-
   &:hover {
     background: $dark-red;
   }
@@ -18,5 +17,8 @@
     outline: none;
     border: none;
     cursor: pointer;
+  }
+  &_hide {
+    display: none;
   }
 }

@@ -576,6 +576,11 @@ p {
 .logo {
   width: 5.75rem;
   height: 4.3125rem; }
+  .logo_active {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    z-index: 105; }
   .logo__img {
     width: 100%;
     height: 100%; }
@@ -597,7 +602,35 @@ p {
     display: flex; }
     @media screen and (max-width: 768px) {
       .nav-list {
-        display: none; } }
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        z-index: 100;
+        background-color: rgba(47, 50, 52, 0.99);
+        opacity: 0;
+        -webkit-transition: opacity .3s linear;
+        -o-transition: opacity .3s linear;
+        transition: opacity .3s linear; } }
+    .nav-list_active {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
   .nav__item:not(:last-child):after {
     display: inline-block;
     padding: 0 0.9375rem;
@@ -606,8 +639,17 @@ p {
     -webkit-border-radius: 50%;
             border-radius: 50%;
     color: #ffffff; }
+    @media screen and (max-width: 768px) {
+      .nav__item:not(:last-child):after {
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 0; } }
   .nav__item:last-child {
     padding-right: 0.9375rem; }
+    @media screen and (max-width: 768px) {
+      .nav__item:last-child {
+        padding-right: 0; } }
   .nav__link {
     text-decoration: none;
     text-transform: uppercase;
@@ -615,6 +657,10 @@ p {
     font-weight: 500;
     color: #ffffff;
     font-size: 0.8125rem; }
+    @media screen and (max-width: 768px) {
+      .nav__link {
+        font-size: 1.5rem;
+        line-height: 2.5rem; } }
     .nav__link:hover {
       text-decoration: underline; }
 
@@ -633,16 +679,34 @@ p {
           -ms-flex-direction: column;
               flex-direction: column; } }
   .hamburger-menu__line {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     background-color: #ffffff;
     width: 1.5rem;
     height: 0.25rem;
     -webkit-border-radius: 0.125rem;
             border-radius: 0.125rem;
-    margin-bottom: 0.3125rem; }
+    margin-bottom: 0.3125rem;
+    -webkit-transition: background-color .3s linear, -webkit-transform .1s linear;
+    transition: background-color .3s linear, -webkit-transform .1s linear;
+    -o-transition: transform .1s linear, background-color .3s linear;
+    transition: transform .1s linear, background-color .3s linear;
+    transition: transform .1s linear, background-color .3s linear, -webkit-transform .1s linear; }
+  .hamburger-menu_active {
+    position: absolute;
+    z-index: 105;
+    top: 1.5625rem;
+    right: 0.9375rem; }
+    .hamburger-menu_active .hamburger-menu__line {
+      background-color: #c1c2c2; }
+    .hamburger-menu_active .hamburger-menu__line:nth-child(1n+0) {
+      -webkit-transform: rotate(45deg) translateY(0.75rem);
+          -ms-transform: rotate(45deg) translateY(0.75rem);
+              transform: rotate(45deg) translateY(0.75rem); }
+    .hamburger-menu_active .hamburger-menu__line:nth-child(2n+0) {
+      opacity: 0; }
+    .hamburger-menu_active .hamburger-menu__line:nth-child(3n+0) {
+      -webkit-transform: rotate(-45deg) translateY(-0.8125rem);
+          -ms-transform: rotate(-45deg) translateY(-0.8125rem);
+              transform: rotate(-45deg) translateY(-0.8125rem); }
 
 .greeting-content {
   height: 100%;
@@ -1437,6 +1501,8 @@ p {
     outline: none;
     border: none;
     cursor: pointer; }
+  .order-button_hide {
+    display: none; }
 
 .pagination {
   position: fixed;
