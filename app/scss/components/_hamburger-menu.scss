@@ -14,7 +14,7 @@
     transition: transform .1s linear, background-color .3s linear;
   }
   &_active {
-    position: absolute;
+    position: fixed;
     z-index: 105;
     top: rem(25px);
     right: rem(15px);

@@ -577,7 +577,7 @@ p {
   width: 5.75rem;
   height: 4.3125rem; }
   .logo_active {
-    position: absolute;
+    position: fixed;
     top: 0.5rem;
     left: 0;
     z-index: 105; }
@@ -602,7 +602,7 @@ p {
     display: flex; }
     @media screen and (max-width: 768px) {
       .nav-list {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 0;
@@ -691,7 +691,7 @@ p {
     transition: transform .1s linear, background-color .3s linear;
     transition: transform .1s linear, background-color .3s linear, -webkit-transform .1s linear; }
   .hamburger-menu_active {
-    position: absolute;
+    position: fixed;
     z-index: 105;
     top: 1.5625rem;
     right: 0.9375rem; }
@@ -937,6 +937,12 @@ p {
     font-size: 0.875rem;
     color: #2f3234;
     line-height: 1.5rem; }
+
+.burger {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
+  background: -webkit-linear-gradient(#f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  background: -o-linear-gradient(#f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  background: linear-gradient(#f9b43b 0%, #eb8c38 48%, #f9b43b 74%); }
 
 .command {
   background: url("../images/bg/command-bg.jpg") no-repeat center top/cover;
