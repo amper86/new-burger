@@ -1,0 +1,35 @@
+.composition-list {
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  background-color: rgba(255,255,255, .9);
+  border-radius: rem(5px);
+  cursor: default;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .3s linear;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(10px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__icon {
+    width: rem(45px);
+    height: rem(45px);
+    margin-right: rem(20px);
+  }
+  &__name {
+    @include ubuntu(medium);
+    font-size: rem(14px);
+    flex-grow: 1;
+  }
+  &__weight {
+    @include ubuntu(medium);
+    font-size: rem(14px);
+  }
+}

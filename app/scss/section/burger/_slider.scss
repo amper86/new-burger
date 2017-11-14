@@ -1,0 +1,24 @@
+.slider {
+  &-list {
+    @include tablets {
+      padding-top: rem(100px);
+    }
+    &__item {
+      display: flex;
+      @include tablets {
+        padding: 0 rem(90px);
+        flex-wrap: wrap;
+      }
+      @include phones {
+        padding: 0;
+      }
+    }
+    &__column {
+      display: flex;
+      width: 50%;
+      @include tablets {
+        width: 100%;
+      }
+    }
+  }
+}

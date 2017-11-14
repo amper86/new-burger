@@ -4,6 +4,7 @@
 @import "helpers/mixins";
 @import "helpers/base";
 
+@import "components/icon";
 
 @import "section/container";
 
@@ -18,6 +19,13 @@
 @import "section/we/we";
 @import "section/we/title-we";
 @import "section/we/we-list";
+
+@import "section/burger/burger";
+@import "section/burger/arrow";
+@import "section/burger/slider";
+@import "section/burger/burger-info";
+@import "section/burger/composition-list";
+@import "section/burger/burger-content";
 
 @import "section/command/command";
 @import "section/command/accordeon-list";

@@ -6,11 +6,29 @@
     flex-direction: column;
   }
   &__line {
-    display: flex;
     background-color: #ffffff;
     width: rem(24px);
     height: rem(4px);
     border-radius: rem(2px);
     margin-bottom: rem(5px);
+    transition: transform .1s linear, background-color .3s linear;
+  }
+  &_active {
+    position: fixed;
+    z-index: 105;
+    top: rem(25px);
+    right: rem(15px);
+    & .hamburger-menu__line {
+      background-color: #c1c2c2;
+    }
+    & .hamburger-menu__line:nth-child(1n+0) {
+      transform: rotate(45deg) translateY(rem(12px));
+    }
+    & .hamburger-menu__line:nth-child(2n+0) {
+      opacity: 0;
+    }
+    & .hamburger-menu__line:nth-child(3n+0) {
+      transform: rotate(-45deg) translateY(rem(-13px));
+    }
   }
 }
