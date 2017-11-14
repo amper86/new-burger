@@ -1,0 +1,41 @@
+.burger-content {
+  display: flex;
+  flex-direction: column;
+  @include tablets {
+    align-items: center;
+    text-align: center;
+  }
+  &__title {
+    @include title();
+    line-height: rem(64px);
+    margin-bottom: rem(35px);
+    text-transform: uppercase;
+    @include tablets {
+      margin: rem(10px) 0 rem(10px) 0;
+    }
+  }
+  &__text {
+    color: #ffffff;
+    margin-bottom: rem(10px);
+    width: 100%;
+    & p {
+      @include ubuntu(light);
+      font-size: rem(13px);
+      line-height: rem(24px);
+    }
+  }
+  &__order {
+    display: flex;
+    align-items: baseline;
+  }
+  &__currency {
+    @include gagalin();
+    color: $red;
+    font-size: rem(30px);
+    margin-right: rem(30px);
+    white-space: nowrap;
+  }
+  &__price {
+    font-size: rem(72px);
+  }
+}

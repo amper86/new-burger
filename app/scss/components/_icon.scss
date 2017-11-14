@@ -1,0 +1,14 @@
+.icon {
+  &_red {
+    fill: $red;
+  }
+  &_yellow {
+    fill: $yellow;
+  }
+  &_green {
+    fill: $green;
+  }
+  &_white {
+    fill: #ffffff;
+  }
+}
