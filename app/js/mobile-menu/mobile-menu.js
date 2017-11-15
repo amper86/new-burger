@@ -1,4 +1,9 @@
-function openMenu() {
+
+var hamburgerButton = document.querySelector('.hamburger-menu');
+
+hamburgerButton.addEventListener('click', function(e) {
+
+    e.preventDefault();
 
     var hamburgerButtonActive = 'hamburger-menu_active';
 
@@ -34,10 +39,4 @@ function openMenu() {
     }else{
         orderButton.classList.add(orderButtonHide);
     }
-}
-
-var hamburgerButton = document.querySelector('.hamburger-menu');
-
-hamburgerButton.addEventListener('click', function() {
-    openMenu();
 }, false);
