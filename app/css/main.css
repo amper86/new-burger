@@ -1397,16 +1397,30 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0; }
+  @media screen and (max-width: 768px) {
+    .menu-accord {
+      left: 0; } }
   .menu-accord__item {
     height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    @media screen and (max-width: 768px) {
+      .menu-accord__item {
+        width: 5rem; } }
   .menu-accord__link {
     width: 5rem;
     height: 100%;
@@ -1427,6 +1441,9 @@ p {
     top: 50%;
     font-size: 2.5rem;
     white-space: nowrap;
+    -webkit-transition: color .3s linear;
+    -o-transition: color .3s linear;
+    transition: color .3s linear;
     font-family: 'Gagalin-Regular', Helvetiva, sans-serif;
     color: #ffffff;
     text-transform: uppercase;
@@ -1446,20 +1463,34 @@ p {
     width: 0;
     overflow: hidden;
     background-color: rgba(47, 50, 52, 0.8);
-    color: #ffffff; }
+    color: #ffffff;
+    -webkit-transition: width .3s linear;
+    -o-transition: width .3s linear;
+    transition: width .3s linear; }
     .menu-accord__description p {
       font-family: 'Ubuntu', Helvetiva, sans-serif;
       font-weight: 300;
       font-size: 0.875rem;
-      line-height: 1.5rem; }
-  .menu-accord__item_active .menu-accord__title {
-    color: #f9b43b; }
-  .menu-accord__item_active .menu-accord__description {
-    width: 33.75rem;
-    padding: 5rem 2.1875rem; }
-    @media screen and (max-width: 768px) {
-      .menu-accord__item_active .menu-accord__description {
-        width: 100%; } }
+      line-height: 1.5rem;
+      opacity: 0; }
+  .menu-accord__item_active {
+    width: 100%; }
+    .menu-accord__item_active .menu-accord__title {
+      color: #f9b43b; }
+    .menu-accord__item_active .menu-accord__description {
+      padding: 5rem 2.1875rem;
+      width: 33.75rem; }
+      @media screen and (max-width: 768px) {
+        .menu-accord__item_active .menu-accord__description {
+          width: 100%; } }
+      @media screen and (max-width: 480px) {
+        .menu-accord__item_active .menu-accord__description {
+          padding: 0; } }
+      .menu-accord__item_active .menu-accord__description p {
+        opacity: 1;
+        -webkit-transition: opacity .3s linear .3s;
+        -o-transition: opacity .3s linear .3s;
+        transition: opacity .3s linear .3s; }
 
 .reviews__item {
   background: no-repeat center/cover;

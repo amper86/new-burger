@@ -1,12 +1,20 @@
 .menu-accord {
   display: flex;
+  justify-content: flex-end;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
+  @include tablets {
+    left: 0;
+  }
   &__item {
     height: 100%;
     display: flex;
+    justify-content: flex-end;
+    @include tablets {
+      width: rem(80px);
+    }
   }
   &__link {
     width: rem(80px);
@@ -30,6 +38,7 @@
     top: 50%;
     font-size: rem(40px);
     white-space: nowrap;
+    transition: color .3s linear;
     @include gagalin();
     color: #ffffff;
     text-transform: uppercase;
@@ -45,21 +54,31 @@
     overflow: hidden;
     background-color: rgba($black, .8);
     color: #ffffff;
+    transition: width .3s linear;
     p {
       @include ubuntu(light);
       font-size: rem(14px);
       line-height: rem(24px);
+      opacity: 0;
     }
   }
   &__item_active {
+    width: 100%;
     & .menu-accord__title {
       color: $yellow;
     }
     & .menu-accord__description {
-      width: rem(540px);
       padding: rem(80px) rem(35px);
+      width: rem(540px);
       @include tablets {
         width: 100%;
+      }
+      @include phones {
+        padding: 0;
+      }
+      p {
+        opacity: 1;
+        transition: opacity .3s linear .3s;
       }
     }
   }
