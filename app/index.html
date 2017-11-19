@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Burger</title>
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/libs/svg4everybody.js"></script>
     <script>
         svg4everybody();
     </script>
     <script src="js/libs/jquery-3.2.1.min.js"></script>
+    <script src="js/libs/swiper.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -124,9 +126,157 @@
                 <a href="#" class="arrow arrow_left">
                     <img class="arrow_img" src="images/icons/arrow-scroll.svg" alt="left-arrow">
                 </a>
-                <div class="slider">
-                    <ul class="slider-list">
-                        <li class="slider-list__item">
+                <div class="slider swiper-container">
+                    <ul class="slider-list swiper-wrapper">
+                        <li class="slider-list__item swiper-slide">
+                            <div class="slider-list__column burger-info">
+                                <div class="burger-info__picture">
+                                    <img src="images/content/burger_slider.png" alt="Dark-beef" class="burger-info__img">
+                                </div>
+                                <div class="burger-info__composition">
+                                    <svg class="burger-info__icon">
+                                        <use xlink:href="images/icons/sprite.svg#burger"></use>
+                                    </svg>
+                                    <span class="burger-info__icon-text">СОСТАВ</span>
+                                    <ul class="composition-list">
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_red">
+                                                <use xlink:href="images/icons/sprite.svg#beef"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Говядина</span>
+                                            <span class="composition-list__weight">300 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_yellow">
+                                                <use xlink:href="images/icons/sprite.svg#buns"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Булочки</span>
+                                            <span class="composition-list__weight">100 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_green">
+                                                <use xlink:href="images/icons/sprite.svg#salad"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Зелень</span>
+                                            <span class="composition-list__weight">70 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_red">
+                                                <use xlink:href="images/icons/sprite.svg#sauce"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Соус</span>
+                                            <span class="composition-list__weight">150 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_green">
+                                                <use xlink:href="images/icons/sprite.svg#cucumber"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Овощи</span>
+                                            <span class="composition-list__weight">200 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_yellow">
+                                                <use xlink:href="images/icons/sprite.svg#cheese"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Сыр</span>
+                                            <span class="composition-list__weight">80 г</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="burger-info__calories">
+                                    <span class="burger-info__number-calories">1200</span>
+                                    <span class="burger-info__kkal">ккал</span>
+                                </div>
+                            </div>
+                            <div class="slider-list__column burger-content">
+                                <h2 class="burger-content__title">DARK BEEF BURGER</h2>
+                                <div class="burger-content__text">
+                                    <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                                </div>
+                                <div class="burger-content__order">
+                                    <p class="burger-content__currency">
+                                        <span class="burger-content__price">500</span>
+                                        рублей
+                                    </p>
+                                    <a href="#" class="order-button burger-content__button">ЗАКАЗАТЬ</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slider-list__item swiper-slide">
+                            <div class="slider-list__column burger-info">
+                                <div class="burger-info__picture">
+                                    <img src="images/content/burger_slider.png" alt="Dark-beef" class="burger-info__img">
+                                </div>
+                                <div class="burger-info__composition">
+                                    <svg class="burger-info__icon">
+                                        <use xlink:href="images/icons/sprite.svg#burger"></use>
+                                    </svg>
+                                    <span class="burger-info__icon-text">СОСТАВ</span>
+                                    <ul class="composition-list">
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_red">
+                                                <use xlink:href="images/icons/sprite.svg#beef"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Говядина</span>
+                                            <span class="composition-list__weight">300 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_yellow">
+                                                <use xlink:href="images/icons/sprite.svg#buns"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Булочки</span>
+                                            <span class="composition-list__weight">100 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_green">
+                                                <use xlink:href="images/icons/sprite.svg#salad"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Зелень</span>
+                                            <span class="composition-list__weight">70 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_red">
+                                                <use xlink:href="images/icons/sprite.svg#sauce"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Соус</span>
+                                            <span class="composition-list__weight">150 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_green">
+                                                <use xlink:href="images/icons/sprite.svg#cucumber"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Овощи</span>
+                                            <span class="composition-list__weight">200 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_yellow">
+                                                <use xlink:href="images/icons/sprite.svg#cheese"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Сыр</span>
+                                            <span class="composition-list__weight">80 г</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="burger-info__calories">
+                                    <span class="burger-info__number-calories">1200</span>
+                                    <span class="burger-info__kkal">ккал</span>
+                                </div>
+                            </div>
+                            <div class="slider-list__column burger-content">
+                                <h2 class="burger-content__title">DARK BEEF BURGER</h2>
+                                <div class="burger-content__text">
+                                    <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                                </div>
+                                <div class="burger-content__order">
+                                    <p class="burger-content__currency">
+                                        <span class="burger-content__price">500</span>
+                                        рублей
+                                    </p>
+                                    <a href="#" class="order-button burger-content__button">ЗАКАЗАТЬ</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slider-list__item swiper-slide">
                             <div class="slider-list__column burger-info">
                                 <div class="burger-info__picture">
                                     <img src="images/content/burger_slider.png" alt="Dark-beef" class="burger-info__img">
@@ -522,5 +672,6 @@
     <script defer src="js/mobile-menu/mobile-menu.js"></script>
     <script src="js/widgets/v-accordion.js"></script>
     <script src="js/widgets/h-accordion.js"></script>
+    <script src="js/widgets/slider.js"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@
       padding-top: rem(100px);
     }
     &__item {
+      padding: rem(30px) 0;
       display: flex;
       @include tablets {
         padding: 0 rem(90px);

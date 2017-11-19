@@ -8,28 +8,17 @@ $(function () {
             items = list.find('.menu-accord__item'),
             activeClass = 'menu-accord__item_active',
             content = $('menu-accord__description', item);
-            /*otherContent = $('.menu-accord__description', list),
-            reqWidth = content.outerWidth();*/
 
 
         if (!item.hasClass(activeClass)) {
+
             items.removeClass(activeClass);
             item.addClass(activeClass);
 
-            /*otherContent.css({
-                'height': 0
-            });
-
-            content.css({
-                'height': reqHeight
-            })*/
-
         } else {
+
             item.removeClass(activeClass);
 
-            /*content.css({
-                'height': 0
-            })*/
         }
     });
 });

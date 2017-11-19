@@ -988,6 +988,7 @@ p {
     padding-top: 6.25rem; } }
 
 .slider-list__item {
+  padding: 1.875rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
