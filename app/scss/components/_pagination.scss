@@ -1,34 +1,40 @@
-.pagination {
-  position: fixed;
-  right: 3.3%;
-  top: rem(90px);
-  z-index: 10;
-  &-list {
-    &__item {
-      margin-bottom: rem(5px);
+
+  .onepage-pagination {
+    position: fixed !important;
+    right: 3.3% !important;
+    top: rem(90px) !important;
+    z-index: 10 !important;
+    padding: 0;
+    li {
+      margin-bottom: rem(5px) !important;
     }
-    &__link {
-      box-sizing: border-box;
-      display: block;
-      position: relative;
-      width: rem(16px);
-      height: rem(16px);
-      border: rem(1px) solid transparent;
-      border-radius: 50%;
-      &:hover, &_active {
-        border-color: #ffffff;
+    a {
+      box-sizing: border-box !important;
+      display: block !important;
+      position: relative !important;
+      width: rem(16px) !important;
+      height: rem(16px) !important;
+      border: rem(1px) solid transparent !important;
+      border-radius: 50% !important;
+      padding: 0 !important;
+      &:hover, &.active {
+        border: 1px solid #ffffff !important;
+      }
+      &.active:before {
+        margin-top: 0 !important;
       }
       &:before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        content: "";
-        width: rem(6px);
-        height: rem(6px);
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        background-color: #ffffff;
+        border: none !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        content: "" !important;
+        width: rem(6px) !important;
+        height: rem(6px) !important;
+        transform: translate(-50%, -50%) !important;
+        border-radius: 50% !important;
+        background-color: #ffffff !important;
       }
     }
   }
-}
+//todo доделать пагинацию или сделать на основе старой js
