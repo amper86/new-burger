@@ -1849,12 +1849,14 @@ p {
     text-decoration: underline; }
 
 .section-contacts {
-  position: relative; }
+  position: relative;
+  background-color: #2f3234; }
   .section-contacts__footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0; }
+    right: 0;
+    z-index: 5; }
 
 .footer {
   padding: 1.125rem 0;
