@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Burger</title>
+    <link rel="stylesheet" href="css/onepage-scroll.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/libs/svg4everybody.js"></script>
     <script>
         svg4everybody();
     </script>
+    <script src="js/libs/jquery-3.2.1.min.js"></script>
+    <script src="js/libs/jquery.onepage-scroll.min.js"></script>
+    <script src="js/libs/swiper.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -123,9 +129,157 @@
                 <a href="#" class="arrow arrow_left">
                     <img class="arrow_img" src="images/icons/arrow-scroll.svg" alt="left-arrow">
                 </a>
-                <div class="slider">
-                    <ul class="slider-list">
-                        <li class="slider-list__item">
+                <div class="slider swiper-container">
+                    <ul class="slider-list swiper-wrapper">
+                        <li class="slider-list__item swiper-slide">
+                            <div class="slider-list__column burger-info">
+                                <div class="burger-info__picture">
+                                    <img src="images/content/burger_slider.png" alt="Dark-beef" class="burger-info__img">
+                                </div>
+                                <div class="burger-info__composition">
+                                    <svg class="burger-info__icon">
+                                        <use xlink:href="images/icons/sprite.svg#burger"></use>
+                                    </svg>
+                                    <span class="burger-info__icon-text">СОСТАВ</span>
+                                    <ul class="composition-list">
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_red">
+                                                <use xlink:href="images/icons/sprite.svg#beef"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Говядина</span>
+                                            <span class="composition-list__weight">300 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_yellow">
+                                                <use xlink:href="images/icons/sprite.svg#buns"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Булочки</span>
+                                            <span class="composition-list__weight">100 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_green">
+                                                <use xlink:href="images/icons/sprite.svg#salad"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Зелень</span>
+                                            <span class="composition-list__weight">70 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_red">
+                                                <use xlink:href="images/icons/sprite.svg#sauce"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Соус</span>
+                                            <span class="composition-list__weight">150 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_green">
+                                                <use xlink:href="images/icons/sprite.svg#cucumber"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Овощи</span>
+                                            <span class="composition-list__weight">200 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_yellow">
+                                                <use xlink:href="images/icons/sprite.svg#cheese"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Сыр</span>
+                                            <span class="composition-list__weight">80 г</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="burger-info__calories">
+                                    <span class="burger-info__number-calories">1200</span>
+                                    <span class="burger-info__kkal">ккал</span>
+                                </div>
+                            </div>
+                            <div class="slider-list__column burger-content">
+                                <h2 class="burger-content__title">DARK BEEF BURGER</h2>
+                                <div class="burger-content__text">
+                                    <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                                </div>
+                                <div class="burger-content__order">
+                                    <p class="burger-content__currency">
+                                        <span class="burger-content__price">500</span>
+                                        рублей
+                                    </p>
+                                    <a href="#" class="order-button burger-content__button">ЗАКАЗАТЬ</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slider-list__item swiper-slide">
+                            <div class="slider-list__column burger-info">
+                                <div class="burger-info__picture">
+                                    <img src="images/content/burger_slider.png" alt="Dark-beef" class="burger-info__img">
+                                </div>
+                                <div class="burger-info__composition">
+                                    <svg class="burger-info__icon">
+                                        <use xlink:href="images/icons/sprite.svg#burger"></use>
+                                    </svg>
+                                    <span class="burger-info__icon-text">СОСТАВ</span>
+                                    <ul class="composition-list">
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_red">
+                                                <use xlink:href="images/icons/sprite.svg#beef"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Говядина</span>
+                                            <span class="composition-list__weight">300 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_yellow">
+                                                <use xlink:href="images/icons/sprite.svg#buns"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Булочки</span>
+                                            <span class="composition-list__weight">100 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_green">
+                                                <use xlink:href="images/icons/sprite.svg#salad"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Зелень</span>
+                                            <span class="composition-list__weight">70 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_red">
+                                                <use xlink:href="images/icons/sprite.svg#sauce"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Соус</span>
+                                            <span class="composition-list__weight">150 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_green">
+                                                <use xlink:href="images/icons/sprite.svg#cucumber"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Овощи</span>
+                                            <span class="composition-list__weight">200 г</span>
+                                        </li>
+                                        <li class="composition-list__item">
+                                            <svg class="composition-list__icon icon_yellow">
+                                                <use xlink:href="images/icons/sprite.svg#cheese"></use>
+                                            </svg>
+                                            <span class="composition-list__name">Сыр</span>
+                                            <span class="composition-list__weight">80 г</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="burger-info__calories">
+                                    <span class="burger-info__number-calories">1200</span>
+                                    <span class="burger-info__kkal">ккал</span>
+                                </div>
+                            </div>
+                            <div class="slider-list__column burger-content">
+                                <h2 class="burger-content__title">DARK BEEF BURGER</h2>
+                                <div class="burger-content__text">
+                                    <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                                </div>
+                                <div class="burger-content__order">
+                                    <p class="burger-content__currency">
+                                        <span class="burger-content__price">500</span>
+                                        рублей
+                                    </p>
+                                    <a href="#" class="order-button burger-content__button">ЗАКАЗАТЬ</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slider-list__item swiper-slide">
                             <div class="slider-list__column burger-info">
                                 <div class="burger-info__picture">
                                     <img src="images/content/burger_slider.png" alt="Dark-beef" class="burger-info__img">
@@ -223,7 +377,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="accordeon-list__item accordeon-list__item_active">
+                        <li class="accordeon-list__item">
                             <a href="#" class="accordeon-list__name">РИЧАРД ДЖЕЙМС</a>
                             <div class="accordeon-list__content">
                                 <div class="accordeon-list__picture">
@@ -266,7 +420,7 @@
         <section class="section menu">
             <h2 class="menu__title">МЕНЮ</h2>
                 <ul class="menu-accord">
-                    <li class="menu-accord__item menu-accord__item_active">
+                    <li class="menu-accord__item">
                         <a href="#" class="menu-accord__link" style="background-image: url('images/bg/meat-bg.jpg')">
                             <span class="menu-accord__title">Для мясоедов</span>
                         </a>
@@ -305,57 +459,57 @@
             <ul class="reviews-list">
                 <li class="reviews__item" style="background-image: url(images/content/reviews-1.jpg)">
                     <div class="reviews__description">
-                        <h3 class="reviews__name">КОНСТАНТИН СПИЛБЕРГ</h3>
-                        <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                        <h3 class="reviews__name">1КОНСТАНТИН СПИЛБЕРГ</h3>
+                        <p>1Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="#" class="reviews-button">ПОДРОБНЕЕ</a>
                     </div>
                 </li>
                 <li class="reviews__item" style="background-image: url(images/content/reviews-2.jpg)">
                     <div class="reviews__description">
-                        <h3 class="reviews__name">КОНСТАНТИН СПИЛБЕРГ</h3>
-                        <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                        <h3 class="reviews__name">2КОНСТАНТИН СПИЛБЕРГ</h3>
+                        <p>2Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="#" class="reviews-button">ПОДРОБНЕЕ</a>
                     </div>
                 </li>
                 <li class="reviews__item" style="background-image: url(images/content/reviews-3.jpg)">
                     <div class="reviews__description">
-                        <h3 class="reviews__name">КОНСТАНТИН СПИЛБЕРГ</h3>
-                        <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                        <h3 class="reviews__name">3КОНСТАНТИН СПИЛБЕРГ</h3>
+                        <p>3Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="#" class="reviews-button">ПОДРОБНЕЕ</a>
                     </div>
                 </li>
                 <li class="reviews__item" style="background-image: url(images/content/reviews-4.jpg)">
                     <div class="reviews__description">
-                        <h3 class="reviews__name">КОНСТАНТИН СПИЛБЕРГ</h3>
-                        <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                        <h3 class="reviews__name">4КОНСТАНТИН СПИЛБЕРГ</h3>
+                        <p>4Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="#" class="reviews-button">ПОДРОБНЕЕ</a>
                     </div>
                 </li>
                 <li class="reviews__item" style="background-image: url(images/content/reviews-5.jpg)">
                     <div class="reviews__description">
-                        <h3 class="reviews__name">КОНСТАНТИН СПИЛБЕРГ</h3>
-                        <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                        <h3 class="reviews__name">5КОНСТАНТИН СПИЛБЕРГ</h3>
+                        <p>5Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="#" class="reviews-button">ПОДРОБНЕЕ</a>
                     </div>
                 </li>
                 <li class="reviews__item" style="background-image: url(images/content/reviews-6.jpg)">
                     <div class="reviews__description">
-                        <h3 class="reviews__name">КОНСТАНТИН СПИЛБЕРГ</h3>
-                        <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                        <h3 class="reviews__name">6КОНСТАНТИН СПИЛБЕРГ</h3>
+                        <p>6Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="#" class="reviews-button">ПОДРОБНЕЕ</a>
                     </div>
                 </li>
                 <li class="reviews__item" style="background-image: url(images/content/reviews-7.jpg)">
                     <div class="reviews__description">
-                        <h3 class="reviews__name">КОНСТАНТИН СПИЛБЕРГ</h3>
-                        <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                        <h3 class="reviews__name">7КОНСТАНТИН СПИЛБЕРГ</h3>
+                        <p>7Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="#" class="reviews-button">ПОДРОБНЕЕ</a>
                     </div>
                 </li>
                 <li class="reviews__item" style="background-image: url(images/content/reviews-8.jpg)">
                     <div class="reviews__description">
-                        <h3 class="reviews__name">КОНСТАНТИН СПИЛБЕРГ</h3>
-                        <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                        <h3 class="reviews__name">8КОНСТАНТИН СПИЛБЕРГ</h3>
+                        <p>8Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="#" class="reviews-button">ПОДРОБНЕЕ</a>
                     </div>
                 </li>
@@ -440,7 +594,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section-contacts" style="background: url('images/bg/map-bg.jpg') no-repeat center/cover">
+        <section id="map" class="section section-contacts">
             <footer class="footer section-contacts__footer">
                 <div class="container container_footer">
                     <div class="footer__column">
@@ -488,36 +642,56 @@
                 </div>
             </footer>
         </section>
-        <div class="pagination">
-            <ul class="pagination-list">
-                <li class="pagination-list__item">
-                    <a href="#" class="pagination-list__link pagination-list__link_active"></a>
-                </li>
-                <li class="pagination-list__item">
-                    <a href="#" class="pagination-list__link"></a>
-                </li>
-                <li class="pagination-list__item">
-                    <a href="#" class="pagination-list__link"></a>
-                </li>
-                <li class="pagination-list__item">
-                    <a href="#" class="pagination-list__link"></a>
-                </li>
-                <li class="pagination-list__item">
-                    <a href="#" class="pagination-list__link"></a>
-                </li>
-                <li class="pagination-list__item">
-                    <a href="#" class="pagination-list__link"></a>
-                </li>
-                <li class="pagination-list__item">
-                    <a href="#" class="pagination-list__link"></a>
-                </li>
-                <li class="pagination-list__item">
-                    <a href="#" class="pagination-list__link"></a>
-                </li>
-            </ul>
+    </div>
+
+    <!--<div class="pagination">
+        <ul class="pagination-list">
+            <li class="pagination-list__item">
+                <a href="#" class="pagination-list__link pagination-list__link_active"></a>
+            </li>
+            <li class="pagination-list__item">
+                <a href="#" class="pagination-list__link"></a>
+            </li>
+            <li class="pagination-list__item">
+                <a href="#" class="pagination-list__link"></a>
+            </li>
+            <li class="pagination-list__item">
+                <a href="#" class="pagination-list__link"></a>
+            </li>
+            <li class="pagination-list__item">
+                <a href="#" class="pagination-list__link"></a>
+            </li>
+            <li class="pagination-list__item">
+                <a href="#" class="pagination-list__link"></a>
+            </li>
+            <li class="pagination-list__item">
+                <a href="#" class="pagination-list__link"></a>
+            </li>
+            <li class="pagination-list__item">
+                <a href="#" class="pagination-list__link"></a>
+            </li>
+        </ul>
+    </div>-->
+
+    <div class="reviews-popup">
+        <div class="reviews-popup__window">
+            <a href="#" class="reviews-popup__dismiss">
+                <span class="reviews-popup__line"></span>
+                <span class="reviews-popup__line"></span>
+            </a>
+            <div class="reviews-popup__container">
+                <h3></h3>
+                <p></p>
+            </div>
         </div>
     </div>
 
     <script defer src="js/mobile-menu/mobile-menu.js"></script>
+    <script src="js/widgets/v-accordion.js"></script>
+    <script src="js/widgets/h-accordion.js"></script>
+    <script src="js/widgets/one-page-scroll.js"></script>
+    <script src="js/widgets/slider.js"></script>
+    <script src="js/widgets/review-popup.js"></script>
+    <script src="js/widgets/map.js"></script>
 </body>
 </html>

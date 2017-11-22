@@ -39,6 +39,10 @@
         line-height: normal;
         margin-bottom: rem(13px);
       }
+      @include phones {
+        height: 0;
+        overflow: hidden;
+      }
     }
   }
   &__name {
@@ -49,6 +53,9 @@
     padding-top: rem(50px);
     @include tablets {
       padding-top: rem(10px);
+    }
+    @include phones {
+      padding-top: 30%;
     }
   }
 }
