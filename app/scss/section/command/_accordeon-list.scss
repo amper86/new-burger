@@ -40,26 +40,19 @@
       align-items: center;
     }
   }
-  //todo: на safari в планшете и телефоне при анимации квадратная картинка!!!
   &__picture {
     flex: 0 0 rem(100px);
     height: rem(100px);
     overflow: hidden;
-    position: relative;
-    text-align: center;
-    border-radius: 50%;
-    vertical-align: top;
     @include tablets {
       width: rem(100px);
-      margin-bottom: rem(20px);
+
     }
   }
   &__image {
     height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    border-radius: 50%;
   }
   &__description {
     flex: 0 0 rem(260px);
@@ -73,10 +66,13 @@
 
   }
   &__proffesion {
-    margin: 0 0 rem(12px) 0;
+    padding: 0 0 rem(12px) 0;
     @include ubuntu(bold);
     font-size: rem(14px);
     color: #ffffff;
+    @include  tablets {
+      padding-top: rem(20px);
+    }
   }
   &__text {
     @include ubuntu(light);
@@ -90,10 +86,9 @@
   .accordeon-list__name {
     color: $yellow;
     &:before {
-      transform: translateY(-100%) rotateX(180deg);
+      transform: rotate(-180deg) translateY(100%);
     }
   }
   .accordeon-list__content {
-    /*max-height: 260px;*/
   }
 }

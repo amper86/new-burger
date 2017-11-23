@@ -43,7 +43,7 @@ ymaps.ready(function () {
             iconImageSize: [46, 57]
         });
 
-    myMap.behaviors.disable('scrollZoom');
+    myMap.behaviors.disable(['drag', 'scrollZoom', 'dblClickZoom']);
 
     myMap.geoObjects
         .add(burger1)
