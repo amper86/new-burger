@@ -49,7 +49,7 @@ if($street == ''){
     $result['text'] = 'Напишите улицу!';
 }
 if($result['status'] == 'true'){
-    mail('amper86@gmail.com', 'Заказ', $mail_message, $headers);
+    mail('86amper@gmail.com', 'Заказ', $mail_message, $headers);
     $result['text'] = 'Сообщение отправлено';
 }
 
