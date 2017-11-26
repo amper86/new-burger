@@ -1887,6 +1887,8 @@ p {
     cursor: pointer; }
   .order-button_hide {
     display: none; }
+  .order-button_dismiss {
+    display: inline-block; }
 
 .onepage-pagination {
   position: fixed !important;
@@ -2011,3 +2013,27 @@ p {
     transition: .3s linear; }
     .social-list__icon:hover {
       fill: #ffffff; }
+
+.form-popup {
+  display: none;
+  padding: 1.25rem;
+  width: 12.5rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  -webkit-box-shadow: 0 0 40px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 40px 4px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  -webkit-border-radius: 0.3125rem;
+          border-radius: 0.3125rem; }
+  .form-popup p {
+    font-family: 'Ubuntu', Helvetiva, sans-serif;
+    font-weight: 300;
+    color: #2f3234;
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem; }

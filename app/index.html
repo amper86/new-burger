@@ -519,41 +519,41 @@
             <div class="container container_form">
                 <h2 class="payment__title">Закажите доставку</h2>
                 <div class="form">
-                    <form class="form__elem">
+                    <form action="form.php" method="post" id="form-order" class="form__elem">
                         <div class="form__container">
                             <div class="form__column">
                             <div class="form__row">
                                 <div class="form__block">
                                     <label for="name" class="form__label">Имя</label>
-                                    <input type="text" id="name" class="form__input">
+                                    <input type="text" id="name" class="form__input" name="name">
                                 </div>
                                 <div class="form__block">
                                     <label for="phone" class="form__label">Телефон</label>
-                                    <input type="text" id="phone" class="form__input">
+                                    <input type="text" id="phone" class="form__input" name="phone">
                                 </div>
                             </div>
                             <div class="form__row">
                                 <div class="form__block">
                                     <label for="street" class="form__label">Улица</label>
-                                    <input type="text" id="street" class="form__input">
+                                    <input type="text" id="street" class="form__input" name="street">
                                 </div>
                             </div>
                             <div class="form__row">
                                 <div class="form__block">
                                     <label for="house" class="form__label">Дом</label>
-                                    <input type="text" id="house" class="form__input">
+                                    <input type="text" id="house" class="form__input" name="house">
                                 </div>
                                 <div class="form__block">
                                     <label for="housing" class="form__label">Корпус</label>
-                                    <input type="text" id="housing" class="form__input">
+                                    <input type="text" id="housing" class="form__input" name="housing">
                                 </div>
                                 <div class="form__block">
                                     <label for="apartment" class="form__label">Квартира</label>
-                                    <input type="text" id="apartment" class="form__input">
+                                    <input type="text" id="apartment" class="form__input" name="apartment">
                                 </div>
                                 <div class="form__block">
                                     <label for="floor" class="form__label">Этаж</label>
-                                    <input type="text" id="floor" class="form__input">
+                                    <input type="text" id="floor" class="form__input" name="floor">
                                 </div>
                             </div>
                         </div>
@@ -561,22 +561,22 @@
                             <div class="form__row">
                                 <div class="form__block">
                                     <label for="message" class="form__label">Комментарий</label>
-                                    <textarea id="message" class="form__textarea"></textarea>
+                                    <textarea id="message" class="form__textarea" name="message"></textarea>
                                 </div>
                             </div>
                             <div class="form__row form__row_phone">
                                 <div class="form__block">
-                                    <input type="radio" name="payment" value="cash" id="cash" class="form__input_radio" checked>
+                                    <input type="radio" name="payment" value="наличными" id="cash" class="form__input_radio" checked>
                                     <label for="cash" class="form__label form__label_type_radio">Потребуется сдача</label>
                                 </div>
                                 <div class="form__block">
-                                    <input type="radio" name="payment" value="card" id="card" class="form__input_radio">
+                                    <input type="radio" name="payment" value="картой" id="card" class="form__input_radio">
                                     <label for="card" class="form__label form__label_type_radio">Оплата по карте</label>
                                 </div>
                             </div>
                             <div class="form__row form__row_phone">
                                 <div class="form__block">
-                                    <input type="checkbox" name="not-call" value="not-call" id="not-call" class="form__input_checkbox" checked>
+                                    <input type="checkbox" name="not_call" value="1" id="not-call" class="form__input_checkbox" checked>
                                     <label for="not-call" class="form__label form__label_type_checkbox">Не перезванивать</label>
                                 </div>
                             </div>
@@ -644,35 +644,6 @@
         </section>
     </div>
 
-    <!--<div class="pagination">
-        <ul class="pagination-list">
-            <li class="pagination-list__item">
-                <a href="#" class="pagination-list__link pagination-list__link_active"></a>
-            </li>
-            <li class="pagination-list__item">
-                <a href="#" class="pagination-list__link"></a>
-            </li>
-            <li class="pagination-list__item">
-                <a href="#" class="pagination-list__link"></a>
-            </li>
-            <li class="pagination-list__item">
-                <a href="#" class="pagination-list__link"></a>
-            </li>
-            <li class="pagination-list__item">
-                <a href="#" class="pagination-list__link"></a>
-            </li>
-            <li class="pagination-list__item">
-                <a href="#" class="pagination-list__link"></a>
-            </li>
-            <li class="pagination-list__item">
-                <a href="#" class="pagination-list__link"></a>
-            </li>
-            <li class="pagination-list__item">
-                <a href="#" class="pagination-list__link"></a>
-            </li>
-        </ul>
-    </div>-->
-
     <div class="reviews-popup">
         <div class="reviews-popup__window">
             <a href="#" class="reviews-popup__dismiss">
@@ -686,6 +657,11 @@
         </div>
     </div>
 
+    <div class="form-popup">
+        <p></p>
+        <a href="#" class="order-button order-button_dismiss">ЗАКРЫТЬ</a>
+    </div>
+
     <script defer src="js/mobile-menu/mobile-menu.js"></script>
     <script src="js/widgets/v-accordion.js"></script>
     <script src="js/widgets/h-accordion.js"></script>
@@ -693,5 +669,6 @@
     <script src="js/widgets/slider.js"></script>
     <script src="js/widgets/review-popup.js"></script>
     <script src="js/widgets/map.js"></script>
+    <script src="js/form/form.js"></script>
 </body>
 </html>

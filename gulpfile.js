@@ -36,6 +36,12 @@ gulp.task('build', ['clean', 'sass'], function() {
     var buildCss = gulp.src('app/css/*.*') // Переносим css в продакшен
         .pipe(gulp.dest('dist/css'))
 
+    var buildJs = gulp.src('app/js/**/*.js')
+        .pipe(gulp.dest('dist/js'))
+
+    var buildPhp = gulp.src('app/**/*.php')
+        .pipe(gulp.dest('dist/'))
+
     var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
         .pipe(gulp.dest('dist/fonts'))
 
