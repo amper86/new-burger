@@ -31,7 +31,7 @@ $mail_message = '
 </html>    
 ';
 
-$headers = "From: Администратор сайта <admin@burger.com>\r\n".
+$headers = "From: Администратор сайта <admin@cg54542.tmweb.ru>\r\n".
 "MIME-Version: 1.0" . "\r\n" .
 "Content-type: text/html; charset=UTF-8" . "\r\n";
 
