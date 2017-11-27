@@ -3,6 +3,10 @@
   position: relative;
   &__picture {
     width: 100%;
+    @include phones {
+      width: 60%;
+      margin: 0 auto;
+    }
   }
   &__img {
     width: 100%;

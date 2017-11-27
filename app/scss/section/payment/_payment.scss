@@ -3,5 +3,9 @@
   &__title {
     @include title($yellow);
     text-align: center;
+    @include phones {
+      margin-bottom: 0;
+      line-height: rem(50px);
+    }
   }
 }

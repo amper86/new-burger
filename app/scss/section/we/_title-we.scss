@@ -2,4 +2,7 @@
   @include title($black);
   margin: 0 0 rem(80px) 0;
   text-align: center;
+  @include phones {
+    margin-bottom: rem(10px);
+  }
 }
