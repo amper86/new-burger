@@ -63,7 +63,9 @@
     }
   }
   &__item_active {
+    @include tablets {
       width: 100%;
+    }
     & .menu-accord__title {
       color: $yellow;
     }

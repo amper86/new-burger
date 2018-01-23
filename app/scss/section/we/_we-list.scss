@@ -1,5 +1,6 @@
 .we-list {
   display: flex;
+  width: 100%;
   @include phones {
     flex-direction: column;
   }
@@ -12,6 +13,7 @@
     @include phones {
       flex-direction: row;
       align-items: flex-start;
+      flex: 1 1 auto;
       margin-bottom: rem(20px);
     }
   }
@@ -30,6 +32,7 @@
   }
   &__description {
     text-align: center;
+    width: 100%;
     @include phones {
       display: flex;
       flex-direction: column;

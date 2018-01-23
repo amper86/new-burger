@@ -1,5 +1,6 @@
 .greeting-content {
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   @include tablets {
@@ -9,9 +10,8 @@
   &__column {
     flex: 1 0 50%;
     @include tablets {
-      height: auto;
       align-items: center;
-      flex: 0;
+      flex: 0 1 100%;
     }
   }
   &__burger {

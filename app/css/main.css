@@ -736,6 +736,7 @@ p {
 
 .greeting-content {
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -762,15 +763,14 @@ p {
             flex: 1 0 50%; }
     @media screen and (max-width: 768px) {
       .greeting-content__column {
-        height: auto;
         -webkit-box-align: center;
         -webkit-align-items: center;
             -ms-flex-align: center;
                 align-items: center;
         -webkit-box-flex: 0;
-        -webkit-flex: 0;
-            -ms-flex: 0;
-                flex: 0; } }
+        -webkit-flex: 0 1 100%;
+            -ms-flex: 0 1 100%;
+                flex: 0 1 100%; } }
   .greeting-content__burger {
     background: url("../images/icons/drops.svg") no-repeat;
     display: -webkit-box;
@@ -882,7 +882,8 @@ p {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  width: 100%; }
   @media screen and (max-width: 480px) {
     .we-list {
       -webkit-box-orient: vertical;
@@ -920,6 +921,10 @@ p {
         -webkit-align-items: flex-start;
             -ms-flex-align: start;
                 align-items: flex-start;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
         margin-bottom: 1.25rem; } }
   .we-list__image {
     width: 5.625rem;
@@ -936,7 +941,8 @@ p {
     width: 100%;
     height: 100%; }
   .we-list__description {
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
     @media screen and (max-width: 480px) {
       .we-list__description {
         display: -webkit-box;
@@ -1480,24 +1486,25 @@ p {
       font-size: 0.875rem;
       line-height: 1.5rem;
       opacity: 0; }
-  .menu-accord__item_active {
-    width: 100%; }
-    .menu-accord__item_active .menu-accord__title {
-      color: #f9b43b; }
-    .menu-accord__item_active .menu-accord__description {
-      padding: 5rem 2.1875rem;
-      width: 33.75rem; }
-      @media screen and (max-width: 768px) {
-        .menu-accord__item_active .menu-accord__description {
-          width: 100%; } }
-      @media screen and (max-width: 480px) {
-        .menu-accord__item_active .menu-accord__description {
-          padding: 0; } }
-      .menu-accord__item_active .menu-accord__description p {
-        opacity: 1;
-        -webkit-transition: opacity .3s linear .3s;
-        -o-transition: opacity .3s linear .3s;
-        transition: opacity .3s linear .3s; }
+  @media screen and (max-width: 768px) {
+    .menu-accord__item_active {
+      width: 100%; } }
+  .menu-accord__item_active .menu-accord__title {
+    color: #f9b43b; }
+  .menu-accord__item_active .menu-accord__description {
+    padding: 5rem 2.1875rem;
+    width: 33.75rem; }
+    @media screen and (max-width: 768px) {
+      .menu-accord__item_active .menu-accord__description {
+        width: 100%; } }
+    @media screen and (max-width: 480px) {
+      .menu-accord__item_active .menu-accord__description {
+        padding: 0; } }
+    .menu-accord__item_active .menu-accord__description p {
+      opacity: 1;
+      -webkit-transition: opacity .3s linear .3s;
+      -o-transition: opacity .3s linear .3s;
+      transition: opacity .3s linear .3s; }
 
 .reviews-popup {
   position: fixed;
