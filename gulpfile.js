@@ -17,7 +17,7 @@ gulp.task('serve', ['sass'], function() {
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src("app/scss/**/*.scss")
+    return gulp.src("app/scss/main.scss")
         .pipe(sass())
         .pipe(autoprefixer(['last 10 versions', '> 1%'], { cascade: true }))
         .pipe(gulp.dest("app/css"))

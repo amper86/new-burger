@@ -23,7 +23,7 @@ $(function () {
         $('.wrapper').moveDown();
     });
 
-    $('.nav__link, .order-button').on('click', function (e) {
+    $('.nav__link, .order-button[data-nav]').on('click', function (e) {
         e.preventDefault();
 
         var pageNumber = $(this).attr('data-nav');
